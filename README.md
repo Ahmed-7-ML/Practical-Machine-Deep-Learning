@@ -20,6 +20,8 @@ This repository contains structured and practical knowledge on Machine Learning 
 
 
 ## Repository Structure
+<details> <summary><strong>📁 Repository Structure</strong></summary>
+
 Practical-Machine-Deep-Learning/
 │
 ├── README.md
