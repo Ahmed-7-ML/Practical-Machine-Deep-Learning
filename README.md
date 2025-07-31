@@ -78,3 +78,48 @@ Practical-Machine-Deep-Learning/
     │   │   └── App../
     │   └── README.md
     └── Folder/..
+
+
+# 🧠 Practical Machine & Deep Learning
+
+مرحبًا بك في المستودع التعليمي والعملي لتعلم خوارزميات التعلم الآلي والتعلم العميق، خطوة بخطوة، بشكل نظري وعملي، مع مشاريع من الحياة الواقعية من التحليل حتى النشر.
+
+---
+
+## 📁 Repository Structure
+
+<details>
+<summary><strong>اضغط لعرض هيكل الملفات</strong></summary>
+
+```bash
+Practical-Machine-and-Deep-Learning/
+├── README.md
+├── Machine-Learning/
+│   ├── README.md
+│   └── Supervised-Learning/
+│       ├── README.md
+│       └── Linear-Regression/
+│           ├── README.md
+│           ├── Theory/
+│           │   └── Linear_Regression_Theory.pptx     ← الشرح النظري PowerPoint
+│           ├── Code/
+│           │   └── Linear_Regression_Code.ipynb      ← كود عملي خطوة بخطوة
+│           └── Data/
+│               └── sample_data.csv                   ← بيانات تجريبية
+│
+├── Deep-Learning/
+│   ├── README.md
+│   ├── Feedforward-Networks/
+│   ├── CNNs/
+│   ├── RNNs/
+│   ├── Transformers/
+│   └── GANs/
+│
+├── End-To-End-Projects/
+│   ├── README.md
+│   └── House-Price-Prediction/
+│       ├── EDA.ipynb
+│       ├── Model_Building.ipynb
+│       └── Deployment/
+│           └── App/...
+
