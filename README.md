@@ -1,29 +1,36 @@
-# Practical Machine & Deep Learning 🧠💻
+# 🧠💻 Practical Machine & Deep Learning
 
 This repository contains structured and practical knowledge on Machine Learning and Deep Learning, divided into:
 
-- 📘 Theoretical Understanding
-- 🧪 Hands-On Code
-- 📦 End-to-End Projects including Deployment
+- 📘 Theoretical Understanding  
+- 🧪 Hands-On Code  
+- 📦 End-to-End Projects including Deployment  
+
+---
 
 ## 📁 Structure
 
-- `Machine-Learning/` → Supervised, Unsupervised & Reinforcement Learning
-- `Deep-Learning/` → CNNs, RNNs, Transformers, etc.
-- `End-To-End-Projects/` → Real-world full-cycle projects (EDA → Modeling → Deployment) that follow Total Life Cycle
+- `Machine-Learning/` → Supervised, Unsupervised & Reinforcement Learning  
+- `Deep-Learning/` → CNNs, RNNs, Transformers, etc.  
+- `End-To-End-Projects/` → Real-world full-cycle projects (EDA → Modeling → Deployment) that follow Total Life Cycle  
+
+---
 
 ## 📌 Goals
 
-- Build deep understanding from scratch
-- Practice with hands-on implementations
-- Create a professional project portfolio
+- Build deep understanding from scratch  
+- Practice with hands-on implementations  
+- Create a professional project portfolio  
 
+---
 
-## Repository Structure
-<details> <summary><strong>📁 Repository Structure</strong></summary>
+## 📂 Repository Structure
 
-Practical-Machine-Deep-Learning/
-│
+<details>
+<summary><strong>📁 Click to Expand Repository Tree</strong></summary>
+
+```bash
+Practical-Machine-and-Deep-Learning/
 ├── README.md
 │
 ├── Machine-Learning/
@@ -32,41 +39,41 @@ Practical-Machine-Deep-Learning/
 │   │   ├── README.md
 │   │   ├── Regression/
 │   │   │   └── Linear-Regression/
-│   │   │   ── README.md
-│   │   │    ├── Theory/
-│   │   │    │   └── Linear_Regression_Theory.pptx      ← ملف PowerPoint للشرح النظري
-│   │   │    ├── Code/
-│   │   │    │   └── Linear_Regression_Code.ipynb       ← كود│ عملي خطوة بخطوة
-│   │   │    ├── Data/
-│   │   │    │   └── sample_data.csv                    ← بيانات اختبار لو عاوز تجرب
+│   │   │       ├── README.md
+│   │   │       ├── Theory/
+│   │   │       │   └── Linear_Regression_Theory.pptx      ← PowerPoint for theory explanation
+│   │   │       ├── Code/
+│   │   │       │   └── Linear_Regression_Code.ipynb       ← Jupyter Notebook with full implementation
+│   │   │       ├── Data/
+│   │   │       │   └── sample_data.csv                    ← Sample dataset for testing
 │   │   ├── Classification/
-│   │   │   └── ..many algorithms (Theory, Code, Data)
+│   │   │   └── ... (Theory, Code, Data)
 │   │   └── ...
 │   │
 │   ├── Unsupervised-Learning/
 │   │   ├── README.md
 │   │   ├── Clustering/
-│   │   │   └── ..many algorithms (Theory, Code, Data)
+│   │   │   └── ... (Theory, Code, Data)
 │   │   └── Dimensionality_Reduction/
-│   │       └── ..many algorithms (Theory, Code, Data)
+│   │       └── ... (Theory, Code, Data)
 │   │
 │   └── Reinforcement-Learning/
 │       ├── README.md
 │       └── Q-Learning/
-│           └── ..
+│           └── ...
 │
 ├── Deep-Learning/
 │   ├── README.md
 │   ├── Feedforward-Networks/
-│   │   └── ..
+│   │   └── ...
 │   ├── CNNs/
-│   │   └── ..
+│   │   └── ...
 │   ├── RNNs/
-│   │   └── ..
+│   │   └── ...
 │   ├── Transformers/
-│   │   └── ..
+│   │   └── ...
 │   └── GANs/
-│       └── ..
+│       └── ...
 │
 └── End-To-End-Projects/
     ├── README.md
@@ -75,51 +82,6 @@ Practical-Machine-Deep-Learning/
     │   ├── EDA.ipynb
     │   ├── Model_Building.ipynb
     │   ├── Deployment/
-    │   │   └── App../
+    │   │   └── App/
     │   └── README.md
-    └── Folder/..
-
-
-# 🧠 Practical Machine & Deep Learning
-
-مرحبًا بك في المستودع التعليمي والعملي لتعلم خوارزميات التعلم الآلي والتعلم العميق، خطوة بخطوة، بشكل نظري وعملي، مع مشاريع من الحياة الواقعية من التحليل حتى النشر.
-
----
-
-## 📁 Repository Structure
-
-<details>
-<summary><strong>اضغط لعرض هيكل الملفات</strong></summary>
-
-```bash
-Practical-Machine-and-Deep-Learning/
-├── README.md
-├── Machine-Learning/
-│   ├── README.md
-│   └── Supervised-Learning/
-│       ├── README.md
-│       └── Linear-Regression/
-│           ├── README.md
-│           ├── Theory/
-│           │   └── Linear_Regression_Theory.pptx     ← الشرح النظري PowerPoint
-│           ├── Code/
-│           │   └── Linear_Regression_Code.ipynb      ← كود عملي خطوة بخطوة
-│           └── Data/
-│               └── sample_data.csv                   ← بيانات تجريبية
-│
-├── Deep-Learning/
-│   ├── README.md
-│   ├── Feedforward-Networks/
-│   ├── CNNs/
-│   ├── RNNs/
-│   ├── Transformers/
-│   └── GANs/
-│
-├── End-To-End-Projects/
-│   ├── README.md
-│   └── House-Price-Prediction/
-│       ├── EDA.ipynb
-│       ├── Model_Building.ipynb
-│       └── Deployment/
-│           └── App/...
-
+    └── ...
