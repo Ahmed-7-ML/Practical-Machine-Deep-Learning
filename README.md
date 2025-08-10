@@ -2,25 +2,25 @@
 
 This repository contains structured and practical knowledge on Machine Learning and Deep Learning, divided into:
 
-- 📘 Theoretical Understanding  
-- 🧪 Hands-On Code  
-- 📦 End-to-End Projects including Deployment  
+- 📘 Theoretical Understanding
+- 🧪 Hands-On Code
+- 📦 End-to-End Projects including Deployment
 
 ---
 
 ## 📁 Structure
 
-- `Machine-Learning/` → Supervised, Unsupervised & Reinforcement Learning  
-- `Deep-Learning/` → CNNs, RNNs, Transformers, etc.  
-- `End-To-End-Projects/` → Real-world full-cycle projects (EDA → Modeling → Deployment) that follow Total Life Cycle  
+- `Machine-Learning/` → Supervised, Unsupervised & Reinforcement Learning
+- `Deep-Learning/` → CNNs, RNNs, Transformers, etc.
+- `End-To-End-Projects/` → Real-world full-cycle projects (EDA → Modeling → Deployment) that follow Total Life Cycle
 
 ---
 
 ## 📌 Goals
 
-- Build deep understanding from scratch  
-- Practice with hands-on implementations  
-- Create a professional project portfolio  
+- Build deep understanding from scratch
+- Practice with hands-on implementations
+- Create a professional project portfolio
 
 ---
 
@@ -85,3 +85,11 @@ Practical-Machine-and-Deep-Learning/
     │   │   └── App/
     │   └── README.md
     └── ...
+│   └── Natural Language Processing/
+│       ├── README.md
+│       ├── ...
+│   └── Computer Vision/
+│       ├── README.md
+│       ├── ...
+
+```
