@@ -1,0 +1,53 @@
+Web Scraping From Amazon ✅
+
+تبدأ تجيب الداتا (مثلاً: أسعار منتجات، تقييمات، مميزات…).
+
+خلي بالك إن Amazon بتحمي موقعها، فممكن تحتاج Selenium أو استخدام API بديلة زي Keepa API.
+
+Save this Data in a CSV File ✅
+
+خطوة ممتازة علشان تعمل نسخة خام من البيانات قبل أي تعديل.
+
+Select MySQL as a Database to store the CSV File as a Table ✅
+
+كده يبقى عندك Database Structure محترم.
+
+CSV → Import → MySQL (باستخدام LOAD DATA INFILE أو Python/Pandas → SQLAlchemy).
+
+Data Preprocessing ✅
+
+تنظيف الداتا: (Missing Values، Outliers، Encoding Categorical Features).
+
+Normalization أو Standardization حسب الـ model.
+
+Machine Learning Model Training ✅
+
+تبدأ تجرب Regression (لو بتتوقع سعر)، Classification (لو بتتوقع تقييم)، أو Clustering (لو تحليل منتجات).
+
+Machine Learning Evaluation ✅
+
+Metrics: MAE, RMSE (لو Regression)، Accuracy, Precision, Recall, F1 (لو Classification).
+
+Deal with the challenges that may appear ✅
+
+Challenges زي:
+
+Imbalanced Data
+
+High Dimensionality
+
+Overfitting
+
+Hyperparameter Tuning ✅
+
+استخدم GridSearchCV أو RandomizedSearchCV.
+
+ML Deployment via Streamlit ✅
+
+تعمل واجهة بسيطة للمستخدم يدخل بيانات المنتج → يطلع له Prediction.
+
+Dashboards ✅
+
+تعمل Visualization (Matplotlib, Seaborn, Plotly, أو Power BI/Tableau) لعرض Insights من البيانات.
+
+📌 المشروع كده كامل من Data Collection → Database → Preprocessing → ML → Deployment → Visualization.
