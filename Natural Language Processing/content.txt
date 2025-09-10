@@ -1,0 +1,6 @@
+0. Introduction to NLP
+1. Tokenization
+2. Case Folding
+3. Stop Words Removal
+4. Stemming
+5. Lemmitaziation
