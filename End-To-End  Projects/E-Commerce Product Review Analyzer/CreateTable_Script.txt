@@ -1,0 +1,4 @@
+CREATE TABLE Mobiles(
+	mid INTEGER PRIMARY KEY,
+	mname VARCHAR(100)  
+)

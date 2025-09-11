@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://e3.365dm.com/23/04/2048x1152/skynews-diabetes-glucose_6119025.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-input {
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="overlay">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 flex items-center justify-center">
+            <svg class="w-8 h-8 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                </path>
+            </svg>
+            Diabetes Prediction
+        </h1>
+        <form method="post" action="/predict" class="space-y-4">
+            <div>
+                <label for="Pregnancies" class="block text-sm font-medium text-gray-700">Pregnancies</label>
+                <input type="number" name="Pregnancies" id="Pregnancies" required step="any"
+                    placeholder="Enter number of pregnancies"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="Glucose" class="block text-sm font-medium text-gray-700">Glucose</label>
+                <input type="number" name="Glucose" id="Glucose" required step="any" placeholder="Enter glucose level"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="BloodPressure" class="block text-sm font-medium text-gray-700">Blood Pressure</label>
+                <input type="number" name="BloodPressure" id="BloodPressure" required step="any"
+                    placeholder="Enter blood pressure"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="SkinThickness" class="block text-sm font-medium text-gray-700">Skin Thickness</label>
+                <input type="number" name="SkinThickness" id="SkinThickness" required step="any"
+                    placeholder="Enter skin thickness"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="Insulin" class="block text-sm font-medium text-gray-700">Insulin</label>
+                <input type="number" name="Insulin" id="Insulin" required step="any" placeholder="Enter insulin level"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="BMI" class="block text-sm font-medium text-gray-700">BMI</label>
+                <input type="number" name="BMI" id="BMI" required step="any" placeholder="Enter BMI"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="DiabetesPedigreeFunction" class="block text-sm font-medium text-gray-700">Diabetes Pedigree
+                    Function</label>
+                <input type="number" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" required step="any"
+                    placeholder="Enter pedigree function"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="Age" class="block text-sm font-medium text-gray-700">Age</label>
+                <input type="number" name="Age" id="Age" required step="any" placeholder="Enter age"
+                    class="form-input mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <p class="text-lg font-semibold text-blue-800">{{ prediction_text }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
