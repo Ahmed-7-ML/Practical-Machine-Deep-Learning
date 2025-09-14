@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Template Example</title>
+</head>
+<body>
+    <h1>Welcome to Flask!</h1>
+    <p>This is a simple Flask template example.</p> 
+    {% if name %}
+        <p>Hello, {{ name }}!</p>
+    {% else %}  
+        <p>Hello, World!</p>
+    {% endif %}
+</body>
+</html>
