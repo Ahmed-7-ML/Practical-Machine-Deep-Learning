@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توقع سعر السيارة</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚗 توقع سعر سيارتك</h1>
+        <p class="welcome-message">
+            أدخل مواصفات سيارتك واحصل على سعر تقديري دقيق.
+        </p>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="Make">الشركة المصنعة:</label>
+                <select id="Make" name="Make">
+                    <option value="acura">Acura</option>
+                    <option value="alfa_romeo">Alfa Romeo</option>
+                    <option value="aston_martin">Aston Martin</option>
+                    <option value="audi">Audi</option>
+                    <option value="bentley">Bentley</option>
+                    <option value="bmw">BMW</option>
+                    <option value="buick">Buick</option>
+                    <option value="cadillac">Cadillac</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="chrysler">Chrysler</option>
+                    <option value="dodge">Dodge</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="ford">Ford</option>
+                    <option value="gmc">GMC</option>
+                    <option value="genesis">Genesis</option>
+                    <option value="honda">Honda</option>
+                    <option value="hyundai">Hyundai</option>
+                    <option value="infiniti">Infiniti</option>
+                    <option value="kia">Kia</option>
+                    <option value="lamborghini">Lamborghini</option>
+                    <option value="land_rover">Land Rover</option>
+                    <option value="lexus">Lexus</option>
+                    <option value="lincoln">Lincoln</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="maserati">Maserati</option>
+                    <option value="maybach">Maybach</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="mclaren">Mclaren</option>
+                    <option value="mercedes-benz">Mercedes-Benz</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="nissan">Nissan</option>
+                    <option value="oldsmobile">Oldsmobile</option>
+                    <option value="plymouth">Plymouth</option>
+                    <option value="pontiac">Pontiac</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="rolls-royce">Rolls-Royce</option>
+                    <option value="saab">Saab</option>
+                    <option value="scion">Scion</option>
+                    <option value="spyker">Spyker</option>
+                    <option value="subaru">Subaru</option>
+                    <option value="suzuki">Suzuki</option>
+                    <option value="tesla">Tesla</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="volvo">Volvo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Model">الطراز:</label>
+                <select id="Model" name="Model">
+                    <option value="1_series_m">1 Series M</option>
+                    <option value="1_series">1 Series</option>
+                    <option value="2_series">2 Series</option>
+                    <option value="3_series">3 Series</option>
+                    <option value="4_series">4 Series</option>
+                    <option value="5_series">5 Series</option>
+                    <option value="6_series">6 Series</option>
+                    <option value="7_series">7 Series</option>
+                    <option value="8_series">8 Series</option>
+                    <option value="z4">Z4</option>
+                    <option value="x3">X3</option>
+                    <option value="x4">X4</option>
+                    <option value="x5">X5</option>
+                    <option value="x6">X6</option>
+                    <option value="m3">M3</option>
+                    <option value="m4">M4</option>
+                    <option value="m5">M5</option>
+                    <option value="m6">M6</option>
+                    <option value="i3">i3</option>
+                    <option value="i8">i8</option>
+                    <option value="z3">Z3</option>
+                    <option value="z8">Z8</option>
+                    <option value="cl">CL</option>
+                    <option value="ilx">ILX</option>
+                    <option value="mdx">MDX</option>
+                    <option value="nsx">NSX</option>
+                    <option value="rdx">RDX</option>
+                    <option value="rlx">RLX</option>
+                    <option value="tlx">TLX</option>
+                    <option value="tsx">TSX</option>
+                    <option value="zdx">ZDX</option>
+                    <option value="rl">RL</option>
+                    <option value="tl">TL</option>
+                    <option value="ts">TS</option>
+                    <option value="rsx">RSX</option>
+                    <option value="cl">CL</option>
+                    <option value="el">EL</option>
+                    <option value="slx">SLX</option>
+                    <option value="vigor">Vigor</option>
+                    <option value="alero">Alero</option>
+                    <option value="aurora">Aurora</option>
+                    <option value="brava">Brava</option>
+                    <option value="cutlass_supreme">Cutlass Supreme</option>
+                    <option value="cutlass_calais">Cutlass Calais</option>
+                    <option value="cutlass_ciera">Cutlass Ciera</option>
+                    <option value="cutlass_cruiser">Cutlass Cruiser</option>
+                    <option value="cutlass_salon">Cutlass Salon</option>
+                    <option value="cutlass_442">Cutlass 442</option>
+                    <option value="cutlass_f85">Cutlass F85</option>
+                    <option value="cutlass_gt">Cutlass GT</option>
+                    <option value="cutlass_s">Cutlass S</option>
+                    <option value="cutlass_v8">Cutlass V8</option>
+                    <option value="cutlass_x">Cutlass X</option>
+                    <option value="cutlass_x_v6">Cutlass X V6</option>
+                    <option value="cutlass_x_v8">Cutlass X V8</option>
+                    <option value="achieva">Achieva</option>
+                    <option value="bravada">Bravada</option>
+                    <option value="custom_cruiser">Custom Cruiser</option>
+                    <option value="delta_88">Delta 88</option>
+                    <option value="eighty_eight">Eighty Eight</option>
+                    <option value="intrigue">Intrigue</option>
+                    <option value="lss">LSS</option>
+                    <option value="omega">Omega</option>
+                    <option value="silhouette">Silhouette</option>
+                    <option value="toronado">Toronado</option>
+                    <option value="cutlass">Cutlass</option>
+                    <option value="cutlass_bravada">Cutlass Bravada</option>
+                    <option value="cutlass_calais_v8">Cutlass Calais V8</option>
+                    <option value="cutlass_ciera_v6">Cutlass Ciera V6</option>
+                    <option value="cutlass_ciera_v8">Cutlass Ciera V8</option>
+                    <option value="cutlass_cruiser_v6">Cutlass Cruiser V6</option>
+                    <option value="cutlass_cruiser_v8">Cutlass Cruiser V8</option>
+                    <option value="cutlass_salon_v6">Cutlass Salon V6</option>
+                    <option value="cutlass_salon_v8">Cutlass Salon V8</option>
+                    <option value="cutlass_supreme_v6">Cutlass Supreme V6</option>
+                    <option value="cutlass_supreme_v8">Cutlass Supreme V8</option>
+                    <option value="cutlass_v6">Cutlass V6</option>
+                    <option value="cutlass_v8">Cutlass V8</option>
+                    <option value="cutlass_x">Cutlass X</option>
+                    <option value="cutlass_x_v6">Cutlass X V6</option>
+                    <option value="cutlass_x_v8">Cutlass X V8</option>
+                    <option value="cutlass_s_v6">Cutlass S V6</option>
+                    <option value="cutlass_s_v8">Cutlass S V8</option>
+                    <option value="cutlass_442_v6">Cutlass 442 V6</option>
+                    <option value="cutlass_442_v8">Cutlass 442 V8</option>
+                    <option value="cutlass_gt_v6">Cutlass GT V6</option>
+                    <option value="cutlass_gt_v8">Cutlass GT V8</option>
+                    <option value="cutlass_f85_v6">Cutlass F85 V6</option>
+                    <option value="cutlass_f85_v8">Cutlass F85 V8</option>
+                    <option value="cutlass_s_442">Cutlass S 442</option>
+                    <option value="cutlass_s_gt">Cutlass S GT</option>
+                    <option value="cutlass_s_f85">Cutlass S F85</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Engine Fuel Type">نوع الوقود:</label>
+                <select id="Engine Fuel Type" name="Engine Fuel Type">
+                    <option value="premium_unleaded_(required)">بريميوم (مطلوب)</option>
+                    <option value="regular_unleaded">عادي</option>
+                    <option value="premium_unleaded_(recommended)">بريميوم (موصى به)</option>
+                    <option value="flex-fuel_(unleaded/e85)">وقود مرن (عادي/E85)</option>
+                    <option value="diesel">ديزل</option>
+                    <option value="electric">كهربائي</option>
+                    <option value="flex-fuel_(premium_unleaded_recommended/e85)">وقود مرن (بريميوم/E85)</option>
+                    <option value="flex-fuel_(premium_unleaded_required/e85)">وقود مرن (بريميوم/E85)</option>
+                    <option value="flex-fuel_(unleaded/natural_gas)">وقود مرن (عادي/غاز طبيعي)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Engine HP">قوة المحرك (حصان):</label>
+                <input type="number" id="Engine HP" name="Engine HP" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="Engine Cylinders">عدد الأسطوانات:</label>
+                <input type="number" id="Engine Cylinders" name="Engine Cylinders" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="Doors">عدد الأبواب:</label>
+                <input type="number" id="Doors" name="Doors" min="2" max="4" required>
+            </div>
+            <div class="form-group">
+                <label for="Vehicle Style">شكل السيارة:</label>
+                <select id="Vehicle Style" name="Vehicle Style">
+                    <option value="coupe">كوبيه</option>
+                    <option value="convertible">قابلة للتحويل</option>
+                    <option value="sedan">سيدان</option>
+                    <option value="suv">سيارة متعددة الاستخدامات</option>
+                    <option value="4dr_hatchback">هاتشباك 4 أبواب</option>
+                    <option value="wagon">ستيشن واجن</option>
+                    <option value="cargo_van">فان بضائع</option>
+                    <option value="crew_cab_pickup">بيك آب كابينة مزدوجة</option>
+                    <option value="extended_cab_pickup">بيك آب كابينة ممتدة</option>
+                    <option value="passenger_minivan">فان ركاب صغيرة</option>
+                    <option value="passenger_van">فان ركاب</option>
+                    <option value="regular_cab_pickup">بيك آب كابينة عادية</option>
+                    <option value="2dr_hatchback">هاتشباك ببابين</option>
+                    <option value="hybrid">هجينة</option>
+                    <option value="gti">GTI</option>
+                    <option value="crossover">كروس أوفر</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Highway MPG">استهلاك الوقود (طريق سريع):</label>
+                <input type="number" id="Highway MPG" name="Highway MPG" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="City MPG">استهلاك الوقود (مدينة):</label>
+                <input type="number" id="City MPG" name="City MPG" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="Popularity">الشعبية:</label>
+                <input type="number" id="Popularity" name="Popularity" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="Transmission Type">نوع ناقل الحركة:</label>
+                <select id="Transmission Type" name="Transmission Type">
+                    <option value="manual">يدوي</option>
+                    <option value="automatic">أوتوماتيكي</option>
+                    <option value="automated_manual">أوتوماتيكي يدوي</option>
+                    <option value="direct_drive">قيادة مباشرة</option>
+                    <option value="unknown">غير معروف</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Driven Wheels">نظام الدفع:</label>
+                <select id="Driven Wheels" name="Driven Wheels">
+                    <option value="rear_wheel_drive">دفع خلفي</option>
+                    <option value="front_wheel_drive">دفع أمامي</option>
+                    <option value="all_wheel_drive">دفع رباعي مستمر</option>
+                    <option value="four_wheel_drive">دفع رباعي</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Vehicle Size">حجم السيارة:</label>
+                <select id="Vehicle Size" name="Vehicle Size">
+                    <option value="compact">مدمجة</option>
+                    <option value="midsize">متوسطة</option>
+                    <option value="large">كبيرة</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Year">سنة الصنع:</label>
+                <input type="number" id="Year" name="Year" min="1990" max="2017" required>
+            </div>
+            <button type="submit">توقع السعر</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="prediction-result">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
